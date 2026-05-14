@@ -28,7 +28,8 @@ Findings follow a uniform format with chapter references back to Zobel:
 ## Installation
 
 ```bash
-claude plugin install https://github.com/fatihcatalkaya/lector-skill
+claude plugin marketplace add https://github.com/fatihcatalkaya/lector-skill
+claude plugin install lector
 ```
 
 Or from a local clone:
