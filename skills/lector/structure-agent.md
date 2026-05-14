@@ -26,14 +26,14 @@ If no issues found in a section, skip it.
 
 **Anti-patterns to flag:**
 - "A Study of X", "An Investigation of X", "An Investigation into X", "On the X" — these are weak, non-descriptive patterns
-  - BAD: "An Investigation of the Effectiveness of Extensions to Standard Ranking Techniques for Large Text Collections"
-  - GOOD: "Extensions to Ranking Techniques for Large Text Collections"
+  - BAD: "An Investigation into the Effectiveness of Heuristics for Balanced Partitioning of Large Sparse Graphs"
+  - GOOD: "Heuristics for Balanced Partitioning of Large Sparse Graphs"
 - "Towards X" — implies X is not actually achieved; flag if the paper does achieve X
 - Title that is contentless, too general, or fails to reflect the actual contribution
 - Title that is a complete sentence (looks odd in academic CS)
 - Colon constructions are fine ("System: A Subtitle") but subtitle must add specificity, not just restate
 
-**Good title pattern:** Describes the contribution specifically. "Signature File Indexes Based on Multiple-Block Descriptor Files" not "A New Signature File Scheme Based on Multiple-Block Descriptor Files for Indexing Very Large Data Bases."
+**Good title pattern:** Describes the contribution specifically. "Slab Allocation Strategies for Reduced Fragmentation in Kernel Memory Pools" not "A Novel Approach to Memory Allocation in Operating System Kernels Using Slab-Based Techniques for Improved Performance."
 
 ### Abstract
 
@@ -43,8 +43,8 @@ Flag any of:
 - **Citations in the abstract** — abstracts must be self-contained; no [1], (Smith 2020), etc.
 - **Undefined abbreviations** — any acronym not spelled out on first use in the abstract
 - **Starts with "In this paper we..."** or **"In this thesis we..."** as the very first sentence — context must be established first
-  - BAD: "In this paper we describe a new programming language with matrix manipulation operators."
-  - GOOD: "Most numerical computation is dedicated to manipulation of matrices, but matrix operations are difficult to implement efficiently in current high-level programming languages. In this paper we describe a new programming language with matrix manipulation operators."
+  - BAD: "In this paper we present a shortest-path algorithm for dynamic graphs with frequent edge updates."
+  - GOOD: "Shortest-path queries on graphs whose edges change continuously — such as road networks under live traffic — cannot be served efficiently by classical static algorithms. In this paper we present a shortest-path algorithm for dynamic graphs with frequent edge updates."
 - **No structured content** — an effective abstract addresses: (1) broad research area, (2) specific problem, (3) limitations of existing solutions, (4) the proposed approach, (5) evaluation outcomes. Flag an abstract that omits the problem statement or the evaluation outcome.
 - **Vague claims with no numbers** — "significantly faster", "greatly reduces memory" — the abstract should give concrete quantification where possible (Zobel Ch. 5: "Instead of writing 'space requirements can be significantly reduced', write 'space requirements can be reduced by 60%'.")
 - **Describes the paper's structure** ("Section 2 discusses...") — this belongs in the introduction, not the abstract (Zobel Ch. 5: "Irrelevancies, such as minor details or a description of the structure of the paper, are usually inappropriate.")
@@ -61,10 +61,10 @@ Flag any of:
 - **Introduction that flows from the abstract** — "In most papers, the introduction should not flow on from the abstract" (Zobel Ch. 7). The paper should be complete with the abstract removed.
 - **Boilerplate roadmap** — "Section 2 discusses..." listing that says nothing about what is actually argued. A roadmap sentence is fine; a full paragraph of section names is not.
 - **Beginning with a flat assertion** (Zobel Ch. 7):
-  - BAD: "Use of digital libraries is increasingly common."
-  - BAD: "It is important that the cost of disk accesses be reduced in query processing."
-  - GOOD: "Digital libraries provide fast access to large numbers of documents."
-  - GOOD: "Query processing can involve many disk accesses."
+  - BAD: "Machine learning is widely used in modern software systems."
+  - BAD: "It is important that routing protocols be efficient in large-scale networks."
+  - GOOD: "Machine learning models can infer complex patterns from data that explicit rules would fail to capture."
+  - GOOD: "Routing protocols in large-scale networks must converge quickly to avoid packet loss during topology changes."
 
 ### Body / Main Sections
 
@@ -88,7 +88,7 @@ Flag any of:
 - **No connection to the contribution** — related work that does not set up why the contribution is needed (Zobel Ch. 5: "it shapes what the readers expect of your work")
 - **Citation without naming the author** (Zobel Ch. 6):
   - BAD: "Other work [16] has used an approach in which..."
-  - GOOD: "Marsden [16] has used an approach in which..."
+  - GOOD: "Kellerman [16] has used an approach in which..."
 
 ### Conclusion
 
@@ -96,7 +96,7 @@ Flag any of:
 
 Flag any of:
 - **"Conclusion" (singular) instead of "Conclusions"** — Zobel Ch. 5: "Write 'Conclusions', not 'Conclusion'. If you have no conclusions to draw, write 'Summary'."
-- **Opens with "In this paper" or "In this thesis"** — the conclusion should open with the key finding, not a re-announcement of what the paper does; BAD: "In this paper we have presented X." → GOOD: "X achieves Y% reduction in Z, demonstrating that..."
+- **Opens with "In this paper" or "In this thesis"** — the conclusion should open with the key finding, not a re-announcement of what the paper does; BAD: "In this paper we have presented PruneNet, a structured pruning framework for convolutional networks." → GOOD: "PruneNet reduces model size by 73% with less than 1.2% accuracy loss on ImageNet, demonstrating that aggressive structured pruning is practical for deployment-constrained settings."
 - **Conclusions that repeat the abstract verbatim** — the conclusion should synthesize; it is not just another copy of the abstract
 - **New claims introduced** — the conclusion must not introduce results or claims not supported in the body
 - **Vague future work** — "In future work, we will extend this to other domains" — future work should be specific and motivated, not generic filler

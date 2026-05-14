@@ -32,7 +32,7 @@ Check each figure:
 4. **Caption is self-contained** — a reader should understand the figure without reading the surrounding text. Zobel Ch. 11: "Since figures and tables should be fairly self-contained, the caption is an appropriate place to explain important details."
 5. **Axes labeled with units** — Zobel Ch. 11: "Where appropriate, units should be stated in labels. Write 'Size (bytes)', not just 'Size'."
 6. **Legend present when multiple series** — if a graph shows multiple lines or bars, a legend or direct label is required.
-7. **Figure discussed, not merely referenced** — Zobel Ch. 11 BAD: "As illustrated in Table 6, temporary space requirements were 60–65% of the data size." GOOD: "In our experiments, temporary space requirements were 60–65% of the data size." The interesting result should be stated in the prose, not just pointed at.
+7. **Figure discussed, not merely referenced** — Zobel Ch. 11 BAD: "As shown in Figure 4, average query latency dropped by 40% after index warm-up." GOOD: "Average query latency dropped by 40% after index warm-up." The interesting result should be stated in the prose, not just pointed at.
 
 **Graph-specific checks:**
 - x-axis used for the parameter being varied (input); y-axis for the output
@@ -89,9 +89,9 @@ Check:
 3. **Equations numbered if referenced** — if the text refers to an equation by number ("as shown in Equation 3"), that equation must be numbered. Display equations not referenced elsewhere do not need numbers.
 4. **Notation consistent throughout** — the same symbol must mean the same thing everywhere in the document. Flag any apparent reuse of a symbol for a different concept, or use of multiple symbols for the same concept.
 5. **No sentence beginning with a math symbol** — Zobel Ch. 9: "Sentences with embedded mathematics should be structured as if each formula is a simple phrase. Mathematics should not be used at the start of a sentence."
-   - BAD: "*p ← q₁ ∧ ... ∧ qₙ* is a conditional dependency."
-   - GOOD: "The dependency *p ← q₁ ∧ ... ∧ qₙ* is conditional."
+   - BAD: "*E ⊆ V × V* defines the edge relation of the graph."
+   - GOOD: "The edge relation of the graph is defined by *E ⊆ V × V*."
 6. **Inline vs. display math** — short expressions belong inline; standalone key expressions or those that are referenced should be displayed (set on their own line). Flag overly long inline expressions that would read better as display math.
 7. **Plain text operators** — flag multiplication written as `*` or `x` in math context. Use `×` or `·` or implicit multiplication. Flag programming-language operators (`==`, `!=`, `++`) in mathematical descriptions.
-8. **Definitions introduced explicitly** — Zobel Ch. 9 BAD: "The values are represented as a list of numbers *L*." (ambiguous — does *L* denote the list or a member?) GOOD: "The values are represented as a list *L* of numbers." Introduce the variable, then state what it is.
+8. **Definitions introduced explicitly** — Zobel Ch. 9 BAD: "Each entry is stored in the hash table *H* of size *m*." (ambiguous — does *H* refer to the table or a slot?) GOOD: "Each entry is stored in *H*, a hash table of size *m*." Introduce the variable, then state what it is.
 9. **Parentheses sized appropriately** — Zobel Ch. 9: "Use parentheses of appropriate size; they should stand out from the expressions they enclose."

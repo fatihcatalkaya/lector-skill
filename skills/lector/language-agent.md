@@ -50,9 +50,9 @@ Flag text that is longer than it needs to be.
 Zobel (Ch. 7, Table 7.2): "Use the minimum number of words, of minimum length."
 
 **Nominalizations** — verb-as-noun constructions that weaken sentences:
-- BAD: "the performance of the evaluation" → GOOD: "evaluating performance"
-- BAD: "the utilization of our algorithm" → GOOD: "our algorithm" or "using our algorithm"
-- BAD: "the implementation of the system was performed" → GOOD: "we implemented the system"
+- BAD: "the execution of the compression" → GOOD: "compressing" or "executing the compressor"
+- BAD: "the application of our heuristic" → GOOD: "our heuristic" or "applying our heuristic"
+- BAD: "the construction of the index was carried out" → GOOD: "we constructed the index"
 
 **Vague quantifiers** — flag unquantified claims:
 - BAD: "many existing systems", "several problems", "some approaches", "a number of researchers"
@@ -63,7 +63,7 @@ Zobel (Ch. 7, Table 7.2): "Use the minimum number of words, of minimum length."
 - "end result", "past history", "future plans"
 - "totally eliminated", "completely optimized", "completely random"
 
-**Obfuscation** (Zobel Ch. 6): "Amelioration can lead to large savings." → "Amelioration led to savings of 12–33% in our experiments." Be specific, not vague.
+**Obfuscation** (Zobel Ch. 6): "Caching can substantially improve throughput." → "Caching reduced average query latency by 40–60% across our benchmark workloads." Be specific, not vague.
 
 ---
 
@@ -73,38 +73,38 @@ Zobel (Ch. 7, Table 7.2): "Use the minimum number of words, of minimum length."
 - "clearly", "obviously", "trivially", "it is well known that", "it is easy to see that"
 - These substitute for argument. Either provide evidence or delete.
 
-Zobel (Ch. 6, Straw Men): "BAD: We did not investigate partial interpretation because it is known to be ineffective." — if there is evidence, cite it.
+Zobel (Ch. 6, Straw Men): "BAD: We did not consider approximate nearest-neighbor search because it is known to be inaccurate." — if there is evidence, cite it.
 
 **Ambiguous pronoun references** (Zobel Ch. 7):
-- BAD: "The next stage was the test of the complete system, but it failed." (What failed — the test or the system?)
+- BAD: "We ran the classifier on the validation set, but it produced unexpected results." (What produced unexpected results — the classifier or the validation set?)
 - BAD: "which addresses these issues" where "these issues" were never enumerated
 - Flag every "this", "it", "they" whose antecedent is not unambiguous
 
 **Overqualification** (Zobel Ch. 6):
-- BAD: "The results show that, for the given data, less memory is likely to be required by the new structure, depending on the magnitude of the numbers to be stored and the access pattern."
-- GOOD: "The results show that less memory was required by the new structure. Whether this result holds for other data sets will depend on the magnitude of the numbers and the access pattern, but we expect that the new structure will usually require less memory."
+- BAD: "The results suggest that, for the given workload, lower query latency is likely to be achieved by the new index, depending on the selectivity of the predicates and the data distribution."
+- GOOD: "The results show that the new index reduced query latency on our workload. Whether this holds for other distributions will depend on predicate selectivity, but we expect the improvement to generalize to skewed data."
 
 **Stacked qualifiers** (Zobel Ch. 7):
-- BAD: "It is perhaps possible that the algorithm might fail on unusual input." → GOOD: "The algorithm might fail on unusual input."
+- BAD: "It is perhaps conceivable that the scheduler might possibly deadlock under certain workloads." → GOOD: "The scheduler may deadlock under certain workloads."
 - At most one qualifier per sentence ("might", "may", "perhaps", "possibly", "likely")
 
 **Unnecessary "very", "quite", "simply"** (Zobel Ch. 7):
-- BAD: "There is very little advantage to the networked approach." → GOOD: "There is little advantage to the networked approach."
+- BAD: "There is very little benefit to the replicated storage approach." → GOOD: "There is little benefit to the replicated storage approach."
 
 **Opening paragraph patterns** (Zobel Ch. 7):
-- BAD: "In this paper we describe a new programming language with matrix manipulation operators."
-- GOOD: "Most numerical computation is dedicated to manipulation of matrices, but matrix operations are difficult to implement efficiently in current high-level programming languages. In this paper we describe a new programming language with matrix manipulation operators."
+- BAD: "In this paper we describe a distributed key-value store designed for low-latency reads."
+- GOOD: "Distributed storage systems must often choose between consistency and availability, yet many real-world applications require both low latency and strong consistency guarantees. In this paper we describe a distributed key-value store that achieves low-latency reads without sacrificing linearizability."
 - Flag any abstract or introduction that begins with "In this paper..." or "In this thesis..." as the very first sentence, with no context established first.
 
 **Sentence variety** (Zobel Ch. 7, Variation):
 - Flag sequences of 5+ sentences of the same short structure
-- BAD: "Pregel is a popular system. PowerGraph is another system. GraphX also exists. These systems are all different."
+- BAD: "MapReduce is a framework. Spark is a framework. Flink is a framework. These frameworks are all different."
 - Monotonous rhythm signals underdeveloped prose.
 
 **Tense consistency** (Zobel Ch. 7, Tense):
 - Present tense for eternal truths and algorithm properties: "the algorithm has complexity O(n)"
 - Past tense for the author's own experiments: "we found that", "the experiment showed"
-- BAD: "Experiments show that our system is faster" (present tense for completed experiments) → GOOD: "Our experiments showed that our system is faster"
+- BAD: "Experiments show that our system achieves higher throughput" (present tense for completed experiments) → GOOD: "Our experiments showed that our system achieved higher throughput"
 - Flag mixed tense in the same context
 
 **Synonym-switching for technical terms** (Zobel Ch. 7, Choice of Words):
@@ -116,22 +116,22 @@ Zobel (Ch. 6, Straw Men): "BAD: We did not investigate partial interpretation be
 ## Category 3: Grammar & Punctuation
 
 **Passive voice overuse** (Zobel Ch. 6, Voice):
-- BAD: "The following theorem can now be proved." → GOOD: "We can now prove the following theorem."
-- BAD: "Tree structures can be utilized for dynamic storage of terms." → GOOD: "Terms can be stored in dynamic tree structures."
-- BAD: "Experiments were conducted." → GOOD: "We conducted experiments." or "We ran experiments."
+- BAD: "The upper bound can now be derived." → GOOD: "We can now derive the upper bound."
+- BAD: "Hash tables are employed for constant-time key lookup." → GOOD: "We use hash tables for constant-time key lookup."
+- BAD: "Benchmarks were run on a 32-core machine." → GOOD: "We ran benchmarks on a 32-core machine."
 - Passive is appropriate when the agent is unknown or irrelevant. Flag when used pervasively to hide agency.
 
 **"Utilize" and similar inflated verbs** (Zobel Ch. 6):
-- BAD: "Tree structures can be utilized for dynamic storage." → GOOD: "Terms can be stored in tree structures."
+- BAD: "We utilized a bloom filter to reduce disk accesses." → GOOD: "We used a bloom filter to reduce disk accesses."
 - Prefer "use" over "utilize", "begin" over "initiate", "part" over "component" when both mean the same.
 
 **Which vs. that** (Zobel Ch. 7):
-- BAD: "There is one method which is acceptable." → GOOD: "There is one method that is acceptable."
+- BAD: "We selected the configuration which minimizes cache misses." → GOOD: "We selected the configuration that minimizes cache misses."
 - Use "that" for restrictive clauses; "which" only for non-restrictive (parenthetical) clauses.
 
 **Comma usage** (Zobel Ch. 8):
 - Serial (Oxford) comma required in lists: "arrays, trees, and hash tables" not "arrays, trees and hash tables"
-- Flag missing comma after introductory phrases: "When using disk tree algorithms were found..." → needs comma after "disk"
+- Flag missing comma after introductory phrases: "When profiling heap allocation overhead was found to dominate..." → needs comma after "allocation"
 - Flag comma splices: two independent clauses joined only by a comma
 
 **Stops (periods) in headings** (Zobel Ch. 8):
@@ -192,7 +192,7 @@ Flag any British spelling and replace with American spelling:
 **CS-specific anti-patterns** grounded in Zobel:
 
 **Sweeping unsupported statements** (Zobel Ch. 6, Straw Men):
-- BAD: "As the scale of data on the Web grows to billions of pages, searchers can no longer find answers to queries." — contradicted by daily experience
+- BAD: "As machine learning models grow ever larger, existing hardware is no longer capable of training them." — contradicted by continued successful training runs reported in the literature
 - Flag grand claims about the field that are not cited and could be disputed
 
 **Grandiose claims about own work** (Zobel Ch. 7):
@@ -204,8 +204,8 @@ Flag any British spelling and replace with American spelling:
 - "sophisticated" ≠ novel. Use "novel" only to mean genuinely new.
 
 **Incomplete comparative statements** (Zobel Ch. 7, Repetition and Parallelism):
-- BAD: "The Entity-Relationship model is a better method." Better than what? All comparisons must name the compared entity.
-- BAD: "GraphFast is significantly faster." Faster than what? By how much?
+- BAD: "The inverted index is a more efficient structure." More efficient than what? All comparisons must name the compared entity.
+- BAD: "SkipNet achieves significantly lower latency." Lower than what? By how much?
 
 **Boilerplate roadmap paragraph:**
 - "The remainder of this paper is organized as follows. Section 2 discusses..." — flag if every sentence just names a section without saying what is discovered or argued in it. A roadmap paragraph should convey the logical argument, not just a table of contents.

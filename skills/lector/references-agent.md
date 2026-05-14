@@ -41,14 +41,14 @@ Zobel (Ch. 6): "Each entry in the reference list should include enough detail to
 **Conference papers** — required fields:
 - Authors, title, conference name (full name), year, page numbers (where available)
 - Zobel (Ch. 6): "The conference name should be complete, and authors, title, year, and pages must be provided."
-- BAD: "Malewicz et al. Pregel. SIGMOD 2010." — missing full title and pages
-- GOOD: "G. Malewicz et al. Pregel: A System for Large-Scale Graph Processing. In Proc. ACM SIGMOD, pp. 135–146, 2010."
+- BAD: "Harrington et al. StreamCore. OSDI 2018." — missing full title and pages
+- GOOD: "L. Harrington, P. Osei, and M. Vidal. StreamCore: Low-Latency Data Processing at Scale. In Proc. USENIX OSDI, pp. 401–415, 2018."
 
 **Journal papers** — required fields:
 - Authors, title, journal name (full, not abbreviated beyond standard), volume, issue, page numbers, year
 - Zobel (Ch. 6): "The journal name should be given in full, and author names, paper title, year, volume, number, and pages must be provided."
-- BAD: "T. Wendell, 'Completeness of open negation in quasi-inductive programs', J. Dd. Lang., 34." — journal name abbreviated beyond recognition, no volume/issue/pages
-- GOOD: "T. Wendell, 'Completeness of open negation in quasi-inductive programs', ICSS Journal of Deductive Languages, 34(3):217–222, November 1994."
+- BAD: "A. Bertelsen, 'Incremental repair strategies for self-stabilizing networks', Int. J. Distr. Comp., 22." — journal name abbreviated beyond recognition, no volume/issue/pages
+- GOOD: "A. Bertelsen, 'Incremental repair strategies for self-stabilizing networks', International Journal of Distributed Computing, 22(4):88–103, August 2009."
 
 **Books** — required fields: title, authors, publisher, year, edition if applicable
 
@@ -90,9 +90,9 @@ Flag entries that are missing critical fields.
 (Zobel Ch. 6)
 
 **Named references** (Zobel Ch. 6):
-- When a reference is discussed in the text, the author name should appear: "Marsden [16] has used an approach in which..." not "Other work [16] has used an approach..."
+- When a reference is discussed in the text, the author name should appear: "Quintero [16] has used an approach in which..." not "Other work [16] has used an approach..."
 - BAD: "Other work [16] has used an approach in which..."
-- GOOD: "Marsden [16] has used an approach in which..."
+- GOOD: "Quintero [16] has used an approach in which..."
 - Flag anonymous references that are discussed substantively in the text.
 
 **Self-citations not anonymous** (Zobel Ch. 6):
