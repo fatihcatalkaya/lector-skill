@@ -1,0 +1,11 @@
+{
+  "name": "lector",
+  "description": "CS academic writing self-review skill using Justin Zobel's principles",
+  "version": "1.0.0",
+  "author": {
+    "name": "Fatih Catalkaya",
+    "email": "fatih.catalkaya@yahoo.de"
+  },
+  "license": "MIT",
+  "keywords": ["writing", "academic", "cs", "review", "zobel"]
+}
