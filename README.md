@@ -13,10 +13,14 @@ When you invoke the `lector` skill, it runs 4 subagents in parallel, each coveri
 | **Elements** | Figures, tables, algorithms, mathematical notation |
 | **References** | Citation ↔ reference list integrity, completeness, consistency |
 
-Findings follow a uniform format with chapter references back to Zobel:
+Findings are reported as one markdown table per agent, with globally numbered IDs so you can refer to a specific issue by number when addressing it later:
 
 ```
-- [LOCATION] [CATEGORY] — "offending text" → correction (Zobel Ch. X)
+## Language & Style (2 findings)
+| ID | Location | Category | Finding | Zobel |
+|----|----------|----------|---------|-------|
+| 1  | §2.1 | Economy | "in order to" → "to" | Ch. 3 |
+| 2  | §3   | Register | "we feel the results are good" → "the results improve X by Y%" | Ch. 2 |
 ```
 
 ## Scope
