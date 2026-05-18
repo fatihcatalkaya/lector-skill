@@ -22,45 +22,47 @@ Near-final self-review of CS academic writing. Checks **writing and presentation
    - Elements agent → `skills/lector/elements-agent.md`
    - References agent → `skills/lector/references-agent.md`
 5. Pass to each agent: full document text + document type
-6. Collect all findings and produce a consolidated report
+6. **Assign global IDs**: concatenate the four subagent tables in fixed order — Language → Structure → Elements → References — and number rows sequentially starting at `1`. IDs are unique across the whole report; do not reset per agent.
+7. Produce the consolidated report below.
 
 ## Consolidated Report Format
+
+Each agent gets its own titled section with a finding count and a single markdown table. If an agent reported no findings, keep the section header with `(0 findings)` and write `No findings.` instead of a table.
 
 ```
 # Lector Review — [Document Title or Filename]
 Document type: [Paper / Master's Thesis / PhD Thesis]
 Reviewed: [date]
 
-## Pass 1: Language & Style
-### Economy & Style
-### Register & Clarity  
-### Grammar & Punctuation
-### American English
+## Language & Style (N findings)
+| ID | Location | Category | Finding | Zobel |
+|----|----------|----------|---------|-------|
+| 1  | §2.1 | Economy | "in order to" → "to" | Ch. 3 |
+| 2  | §3   | Register | "we feel that the results are good" → "the results improve X by Y%" | Ch. 2 |
 
-## Pass 2: Structure
-### [section-by-section findings, adapted to document type]
+## Structure (N findings)
+| ID | Location | Category | Finding | Zobel |
+|----|----------|----------|---------|-------|
+| 3  | Introduction | Ordering | motivation after method → move motivation before method | Ch. 7 |
 
-## Pass 3: Elements
-### Figures
-### Tables
-### Algorithms
-### Mathematical Notation
+## Elements (N findings)
+| ID | Location | Category | Finding | Zobel |
+|----|----------|----------|---------|-------|
+| 4  | Fig. 2 | Caption | caption "Results" → state what is shown and the takeaway | Ch. 11 |
 
-## Pass 4: References
-### Citation ↔ Reference List Integrity
-### Completeness
-### Consistency
+## References (N findings)
+| ID | Location | Category | Finding | Zobel |
+|----|----------|----------|---------|-------|
+| 5  | [Smith24] | Missing entry | cited in §3 but absent from reference list → add bibliography entry | Ch. 6 |
 
 ## Summary
-Total findings: N (Language: N | Structure: N | Elements: N | References: N)
-Priority items: [top 3–5 most impactful issues]
+Total findings: N (Language: a | Structure: b | Elements: c | References: d)
+Priority items: #2, #5, … — one-line reason per ID
 ```
 
-## Finding Format (all agents)
+## Finding Format
 
-```
-- [LOCATION] [CATEGORY] — "[offending text or element]" → [correction or expectation] (Zobel Ch. X)
-```
+Subagents emit rows of `| Location | Category | Finding | Zobel |`. The coordinator prepends an `ID` column with sequential global integers.
 
 ## Out of Scope
 

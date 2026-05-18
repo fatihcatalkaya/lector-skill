@@ -12,13 +12,21 @@ Build two lists:
 1. All in-text citations found (by key or number)
 2. All entries in the reference list
 
-Then check systematically. For each issue found, emit a finding in this format:
+Then check systematically. Emit **all** findings as a single markdown table with exactly these columns:
 
 ```
-- [CITATION KEY or REF #] [CATEGORY] — [description of issue] → [what is expected] (Zobel Ch. X)
+| Location | Category | Finding | Zobel |
+|----------|----------|---------|-------|
+| [Smith24] | Missing entry | cited in §3 but absent from reference list → add bibliography entry | Ch. 6 |
+| Ref. 12 | Author format | "J. Smith" vs "Smith, J." elsewhere → use one author-name format consistently | Ch. 6 |
 ```
 
-If no issues found in a category, write `None found.`
+Rules:
+- One row per finding. Do not group, do not add an ID column — the coordinator assigns global IDs.
+- `Location` is the citation key, reference number, or both.
+- `Finding` uses the `current → expected` style.
+- Escape any literal `|` inside a cell as `\|`.
+- If you find no issues at all, emit the single line `No findings.` instead of a table. Do not emit an empty table.
 
 ---
 

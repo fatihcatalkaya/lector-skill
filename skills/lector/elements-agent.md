@@ -8,13 +8,22 @@ You receive: full document text + document type.
 
 ## Your Task
 
-Systematically scan every figure, table, algorithm, and mathematical expression. For each issue found, emit a finding in this format:
+Systematically scan every figure, table, algorithm, and mathematical expression. Emit **all** findings as a single markdown table with exactly these columns:
 
 ```
-- [ELEMENT ID or LOCATION] [TYPE] — [description of issue] → [what is expected] (Zobel Ch. X)
+| Location | Category | Finding | Zobel |
+|----------|----------|---------|-------|
+| Fig. 2 | Caption | caption "Results" → caption must state what is shown and the takeaway | Ch. 11 |
+| Table 3 | Discussion | table not discussed in prose → discuss the main finding in the surrounding text | Ch. 11 |
 ```
 
-If no issues found in a category, write `None found.`
+Rules:
+- One row per finding. Do not group, do not add an ID column — the coordinator assigns global IDs.
+- `Location` is the element identifier (`Fig. N`, `Table N`, `Algorithm N`, or equation/section reference).
+- `Category` is the element type or sub-issue (Caption, Discussion, Notation, etc.).
+- `Finding` uses the `current → expected` style.
+- Escape any literal `|` inside a cell as `\|`.
+- If you find no issues at all, emit the single line `No findings.` instead of a table. Do not emit an empty table.
 
 ---
 

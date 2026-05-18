@@ -8,13 +8,21 @@ You receive: full document text + document type (paper / master's thesis / PhD t
 
 ## Your Task
 
-Review structure systematically. For each issue found, emit a finding in this format:
+Review structure systematically. Emit **all** findings as a single markdown table with exactly these columns:
 
 ```
-- [SECTION NAME] [CATEGORY] — [description of issue] → [what is expected] (Zobel Ch. X)
+| Location | Category | Finding | Zobel |
+|----------|----------|---------|-------|
+| Introduction | Ordering | motivation comes after method → move motivation before method | Ch. 7 |
+| Conclusion | Opening | opens with "In this paper we present…" → open with the key result | Ch. 7 |
 ```
 
-If no issues found in a section, skip it.
+Rules:
+- One row per finding. Do not group, do not add an ID column — the coordinator assigns global IDs.
+- `Location` is the section name (or subsection).
+- `Finding` uses the `current → expected` style.
+- Escape any literal `|` inside a cell as `\|`.
+- If you find no issues at all, emit the single line `No findings.` instead of a table. Do not emit an empty table.
 
 ---
 
